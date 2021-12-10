@@ -1,0 +1,42 @@
+{
+  "root": "libs/react-digital-display",
+  "sourceRoot": "libs/react-digital-display/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/react-digital-display",
+        "tsConfig": "libs/react-digital-display/tsconfig.lib.json",
+        "project": "libs/react-digital-display/package.json",
+        "entryFile": "libs/react-digital-display/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/react-digital-display/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/react-digital-display/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/react-digital-display"],
+      "options": {
+        "jestConfig": "libs/react-digital-display/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

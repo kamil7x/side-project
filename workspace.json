@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "react-digital-display": "libs/react-digital-display",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }
