@@ -19,6 +19,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ~5.3.0
   '@typescript-eslint/parser': ~5.3.0
   babel-jest: 27.2.3
+  clsx: ^1.1.1
   core-js: ^3.6.5
   cypress: ^8.3.0
   eslint: 8.2.0
@@ -42,6 +43,7 @@ specifiers:
   typescript: ~4.4.3
 
 dependencies:
+  clsx: 1.1.1
   core-js: 3.19.3
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -4153,6 +4155,11 @@ packages:
       kind-of: 6.0.3
       shallow-clone: 3.0.1
     dev: true
+
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /co/4.6.0:
     resolution: {integrity: sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=}
