@@ -1,7 +1,14 @@
 import './react-digital-display.module.scss';
 
-/* eslint-disable-next-line */
-export interface ReactDigitalDisplayProps {}
+import { DisplayModule, UnknownCharacterMode } from './types';
+
+export interface ReactDigitalDisplayProps {
+  text: string | string[];
+  module: DisplayModule<unknown>;
+  size: number;
+  height?: number;
+  unknownCharacterMode?: UnknownCharacterMode;
+}
 
 export function ReactDigitalDisplay(props: ReactDigitalDisplayProps) {
   return (
