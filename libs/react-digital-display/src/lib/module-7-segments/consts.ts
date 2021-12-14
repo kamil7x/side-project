@@ -1,6 +1,6 @@
 import { Charset, SpecialChar } from '../types';
 import { SegmentProps } from './components/segment';
-import { Module7SegmentDataType } from './module-7-segments';
+import { Module7SegmentsDataType } from './module-7-segments';
 
 export const SEGMENTS: { key: string; type: SegmentProps['type'] }[] = [
   { key: 'a', type: 'horizontal' },
@@ -12,7 +12,7 @@ export const SEGMENTS: { key: string; type: SegmentProps['type'] }[] = [
   { key: 'g', type: 'horizontal' },
 ];
 
-export const Module7SegmentCharset: Charset<Module7SegmentDataType> = {
+export const Module7SegmentsCharset: Charset<Module7SegmentsDataType> = {
   [SpecialChar.EMPTY]: [false, false, false, false, false, false, false],
   '0': [true, true, true, true, true, true, false],
   '1': [false, true, true, false, false, false, false],

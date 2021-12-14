@@ -1,10 +1,10 @@
 import { DisplayModule } from '../types';
 import { Segment } from './components/segment';
-import { Module7SegmentCharset, SEGMENTS } from './consts';
+import { Module7SegmentsCharset, SEGMENTS } from './consts';
 
 import styles from './module-7-segments.module.scss';
 
-export type Module7SegmentDataType = [
+export type Module7SegmentsDataType = [
   a: boolean,
   b: boolean,
   c: boolean,
@@ -14,7 +14,7 @@ export type Module7SegmentDataType = [
   g: boolean
 ];
 
-export const Module7Segments: DisplayModule<Module7SegmentDataType> = ({
+export const Module7Segments: DisplayModule<Module7SegmentsDataType> = ({
   char,
 }) => {
   return (
@@ -32,7 +32,7 @@ export const Module7Segments: DisplayModule<Module7SegmentDataType> = ({
     </div>
   );
 };
-Module7Segments.charset = Module7SegmentCharset;
+Module7Segments.charset = Module7SegmentsCharset;
 Module7Segments.width = 164;
 Module7Segments.height = 264;
 

@@ -14,6 +14,7 @@ $module-background-color: transparent;
 
 .module {
   box-sizing: border-box;
+  display: inline-block;
   width: $module-width;
   height: $module-height;
   background-color: $module-background-color;
