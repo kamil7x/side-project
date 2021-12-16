@@ -10,11 +10,11 @@ export interface Charset<DataType> {
   [key: string | SpecialChar]: DataType;
 }
 
-export interface ModuleProps {
+export interface DisplayModuleProps {
   char: string;
 }
 
-export type DisplayModule<DataType> = React.ElementType<ModuleProps> & {
+export type DisplayModule<DataType> = React.ElementType<DisplayModuleProps> & {
   charset: Charset<DataType>;
   width: number;
   height: number;
