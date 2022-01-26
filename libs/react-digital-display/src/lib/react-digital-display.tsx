@@ -24,6 +24,18 @@ export const ReactDigitalDisplay = ({
     [text]
   );
 
+  const dimensions = useMemo(() => {
+    const containerHeight = height ?? ModuleComponent.height;
+    const scale = containerHeight / ModuleComponent.height;
+    const containerWidth = size * ModuleComponent.width * scale;
+
+    return {
+      width: containerWidth,
+      height: containerHeight,
+      scale,
+    };
+  }, [height, ModuleComponent.width, ModuleComponent.height]);
+
   const textToDisplay = useMemo(() => {
     const mappedArray = textArray
       .map((char) => {
@@ -53,9 +65,11 @@ export const ReactDigitalDisplay = ({
   return (
     <div
       className={styles.displayContainer}
+      style={{ width: dimensions.width, height: dimensions.height }}
     >
       <div
         className={styles.content}
+        style={{ transform: `scale(${dimensions.scale})` }}
       >
         {textToDisplay.map((char) => (
           <ModuleComponent char={char} />
