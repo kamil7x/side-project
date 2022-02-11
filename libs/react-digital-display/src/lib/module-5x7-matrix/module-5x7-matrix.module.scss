@@ -1,0 +1,31 @@
+$module-padding: 8px;
+$module-background-color: #9bb901;
+
+$rows: 7;
+$columns: 5;
+$dot-size: 24px;
+$dot-gap: 2px;
+
+$dot-background-color: $module-background-color;
+$dot-background-color-active: #111;
+$dot-border-radius: 25%;
+
+.module {
+  box-sizing: border-box;
+  display: inline-grid;
+  grid-template-columns: repeat($columns, $dot-size);
+  grid-template-rows: repeat($rows, $dot-size);
+  gap: $dot-gap;
+  padding: $module-padding;
+  background-color: $module-background-color;
+}
+
+.dot {
+  box-sizing: border-box;
+  border-radius: $dot-border-radius;
+  background-color: $dot-background-color;
+
+  &.active {
+    background-color: $dot-background-color-active;
+  }
+}
